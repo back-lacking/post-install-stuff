@@ -1,0 +1,247 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="spaceshipPyGame" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+          <file>
+            <entry file="file://$PROJECT_DIR$/chanCode.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-2252">
+                  <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="46" />
+                  <folding>
+                    <element signature="e#46#78#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+          <file>
+            <entry file="file://$PROJECT_DIR$/chanCodeModded.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="234">
+                  <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="Image">
+      <summary usageCount="1" lastUsed="1681920372217" />
+    </fileType>
+    <fileType name="Python">
+      <summary usageCount="46" lastUsed="1683648911657" />
+    </fileType>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/test2.py" />
+      <option value="$PROJECT_DIR$/../rpsss/main.py" />
+      <option value="$PROJECT_DIR$/mainWindows.py" />
+      <option value="$PROJECT_DIR$/main.py" />
+      <option value="$PROJECT_DIR$/chanCodeModded.py" />
+      <option value="$PROJECT_DIR$/chanCode.py" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="Python">
+      <summary usageCount="46" lastUsage="1683648911657" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spaceshipPyGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/timmy/Documents/PycharmProjects/spaceshipPyGame}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spaceshipPyGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/timmy/Documents/PycharmProjects/spaceshipPyGame}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/timmy/Documents/PycharmProjects/spaceshipPyGame/Assets}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spaceshipPyGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/timmy/Documents/PycharmProjects/spaceshipPyGame}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/timmy/Documents/PycharmProjects/spaceshipPyGame/venv}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunConfigurationStartHistory">
+    <history>
+      <element setting="Python.chanCode" />
+      <element setting="Python.chanCodeModded" />
+      <element setting="Python.main" />
+      <element setting="Python.mainWindows" />
+      <element setting="Python.test2" />
+    </history>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="mySelectedTabIndex" value="-1" />
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Bookmarks" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2658854" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32988167" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" show_stripe_button="false" weight="0.32100594" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Python Packages" order="4" weight="0.32988167" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32988167" />
+      <window_info anchor="bottom" id="Problems View" order="8" weight="0.32988167" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32988167" />
+      <window_info anchor="bottom" id="Services" order="10" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.25" />
+      <unified_weights bottom="0.32988167" left="0.2658854" />
+    </layout>
+    <recentWindows>
+      <value>Run</value>
+      <value>Project</value>
+      <value>Version Control</value>
+      <value>Python Console</value>
+      <value>Terminal</value>
+      <value>Problems View</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="650" y="329" width="743" height="458" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1681919772604">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="650" y="329" width="743" height="458" key="#com.intellij.fileTypes.FileTypeChooser/0.29.1920.1051@0.29.1920.1051" timestamp="1681919772604" />
+    <state x="714" y="312" key="FileChooserDialogImpl" timestamp="1683562491369">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="714" y="312" key="FileChooserDialogImpl/0.29.1920.1051@0.29.1920.1051" timestamp="1683562491369" />
+    <state x="0" y="29" width="1910" height="1051" key="FileDocumentManager.FileCacheConflict" timestamp="1681941358045">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="0" y="29" width="1910" height="1051" key="FileDocumentManager.FileCacheConflict/0.29.1920.1051@0.29.1920.1051" timestamp="1681941358045" />
+    <state width="1874" height="297" key="GridCell.Tab.0.bottom" timestamp="1683309236217">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="297" key="GridCell.Tab.0.bottom/0.29.1920.1051@0.29.1920.1051" timestamp="1683309236217" />
+    <state width="1874" height="297" key="GridCell.Tab.0.center" timestamp="1683309236217">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="297" key="GridCell.Tab.0.center/0.29.1920.1051@0.29.1920.1051" timestamp="1683309236217" />
+    <state width="1874" height="297" key="GridCell.Tab.0.left" timestamp="1683309236217">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="297" key="GridCell.Tab.0.left/0.29.1920.1051@0.29.1920.1051" timestamp="1683309236217" />
+    <state width="1874" height="297" key="GridCell.Tab.0.right" timestamp="1683309236217">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="297" key="GridCell.Tab.0.right/0.29.1920.1051@0.29.1920.1051" timestamp="1683309236217" />
+    <state x="449" y="189" width="1022" height="737" key="SettingsEditor" timestamp="1683302670360">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="449" y="189" width="1022" height="737" key="SettingsEditor/0.29.1920.1051@0.29.1920.1051" timestamp="1683302670360" />
+    <state width="640" height="264" key="ShowBookmarks" timestamp="1683302179824">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="640" height="264" key="ShowBookmarks/0.29.1920.1051@0.29.1920.1051" timestamp="1683302179824" />
+    <state x="693" y="262" width="524" height="591" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1681921157238">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="693" y="262" width="524" height="591" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.29.1920.1051@0.29.1920.1051" timestamp="1681921157238" />
+    <state x="623" y="260" width="672" height="687" key="search.everywhere.popup" timestamp="1682353349585">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="623" y="260" width="672" height="687" key="search.everywhere.popup/0.29.1920.1051@0.29.1920.1051" timestamp="1682353349585" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../rpsss/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.py" />
+    <entry file="file://$PROJECT_DIR$/Assets/spaceship_red.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainWindows.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chanCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2252">
+          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="46" />
+          <folding>
+            <element signature="e#46#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chanCodeModded.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>gitignore</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="gitignore" />
+          </order>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

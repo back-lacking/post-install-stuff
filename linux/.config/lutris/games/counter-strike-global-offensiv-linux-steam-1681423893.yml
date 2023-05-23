@@ -1,0 +1,14 @@
+game:
+  appid: '730'
+game_slug: counter-strike-global-offensive
+name: 'Counter-Strike: Global Offensive'
+requires: null
+script:
+  game:
+    appid: 730
+service: steam
+service_id: '730'
+slug: counter-strike-global-offensiv-linux-steam
+variables: {}
+version: Linux Steam
+year: 2012
