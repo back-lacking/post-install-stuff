@@ -1,0 +1,55 @@
+<application>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "NextRunPlatformUpdateBuild": "PC-231.8109.197",
+    "NextRunPlatformUpdateVersion": "2023.1",
+    "PACKAGE_FILTER": "turtle",
+    "PyCharm.InitialConfiguration": "true",
+    "PyCharm.InitialConfiguration.V2": "true",
+    "PyCharm.InitialConfiguration.V3": "true",
+    "PyCharm.InitialConfiguration.V4": "true",
+    "PyCharm.InitialConfiguration.V5": "true",
+    "PyCharm.InitialConfiguration.V6": "true",
+    "PyCharm.InitialConfiguration.V7": "true",
+    "PyCharm.InitialConfiguration.V8": "true",
+    "RunOnceActivity.se.text.search": "true",
+    "SettingsSearchHistory": "save\ndefault",
+    "appcds.runOnSecondStart": "PC-223.8836.43-78512a1c4780b5ef4a89f35cb1458845bdad973d26fc1af73534cbeef88d1bba",
+    "bundled.plugins.list.saved.version": "PC-223.8836.43",
+    "experimentalFeature.terminal.shell.command.handling": "false",
+    "file.gist.reindex.count": "12",
+    "fileTypeChangedCounter": "2",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "gotit.previous.run": "PC-223.8617.48",
+    "ide.memory.adjusted": "true",
+    "input.method.disabler.muted": "true",
+    "last_opened_file_path": "/home/timmy/Documents/PycharmProjects",
+    "previousColorScheme": "_@user_IntelliJ Light",
+    "registry.to.advanced.settings.migration.build": "PC-223.8836.43",
+    "tasks.pass.word.conversion.enforced": "true"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/timmy/Documents/PycharmProjects/lists",
+      "/home/timmy/Documents/PycharmProjects/rpsss/main.py",
+      "/home/timmy/Documents/PycharmProjects/kochSnowflake/main.py",
+      "/home/timmy/Documents/PycharmProjects/sierpinskiTriangle/recursive.py",
+      "/home/timmy/Documents/PycharmProjects/kochSnowflake",
+      "/home/timmy/Documents/PycharmProjects/sierpinskiTriangle",
+      "/home/timmy/Documents/PycharmProjects/american-flag2",
+      "/home/timmy/Documents/PycharmProjects",
+      "/home/timmy/Documents/PycharmProjects/guessingGame"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+  <component name="ShownTips">{
+  &quot;shownTips&quot;: {
+    &quot;FindInPath&quot;: 1676394099384
+  }
+}</component>
+</application>

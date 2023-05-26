@@ -17,14 +17,15 @@ metadata_expire=1h
 EOF
 
 # install apps from repos
-sudo dnf install pciutils-devel gcc gcc-c++ make wxGTK wxGTK-devel
-sudo dnf install git audacity prismlauncher goverylay codium mangohud gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.noarch.rpm ffmpeg ffmpeg-devel hardinfo -y 
+sudo dnf install pciutils-devel gcc gcc-c++ make wxGTK wxGTK-devel -y # install build deps
+sudo dnf https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.noarch.rpm -y # virtio drivers 
+sudo dnf install git audacity prismlauncher goverylay codium mangohud gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel hardinfo -y 
 
 # codecs
-sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
-sudo dnf install gstreamer1-plugins-{bad-*,good-*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
-sudo dnf install lame* --exclude=lame-devel
-sudo dnf group upgrade --with-optional Multimedia
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
+sudo dnf install gstreamer1-plugins-{bad-*,good-*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
+sudo dnf install lame* --exclude=lame-devel -y
+sudo dnf group upgrade --with-optional Multimedia -y
 
 # flatpak installs
 flatpak install com.bitwarden.desktop com.discordapp.Discord com.github.Eloston.UngoogledChromium com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager com.usebottles.bottles com.spotify.Client fr.handbrake.ghb md.obsidian.Obsidian org.linux_hardware.hw-probe org.onlyoffice.desktopeditors -y
@@ -49,12 +50,10 @@ cd .. && cd ..
 rm -rf RyzenAdj
 
 tar -xvzf syncthing.tar.gz #install syncthing  
-cd syncthing-linux-amd64-v1.23.4
-sudo mv syncthing ~/.local/bin/
-nano './etc/linux-systemd/user/syncthing.service'
+cd 
+sudo mv ./syncthing-linux-amd64-v1.23.4/syncthing ~/.local/bin/
 sudo mv './etc/linux-systemd/user/syncthing.service' '~/.config/systemd/user/'
-cd ..
-rm -rf syncthing-linux-amd64-v1.23.4
+rm -rf syncthing-linux-amd64-v1.23.4 syncthing.tar.gz
 
 #gnome extensions 
 extensions_array=( user-theme@gnome-shell-extensions.gcampax.github.com extension-list@tu.berry drive-menu@gnome-shell-extensions.gcampax.github.com instantworkspaceswitcher@amalantony.net advanced-alt-tab@G-dH.github.com dash-to-dock@micxgx.gmail.com noannoyance@daase.net trayIconsReloaded@selfmade.pl just-perfection-desktop@just-perfection quick-settings-tweaks@qwreey pip-on-top@rafostar.github.com bluetooth-quick-connect@bjarosze.gmail.com reboottouefi@ubaygd.com batterytime@typeof.pw order-extensions@wa4557.github.com PrivacyMenu@stuarthayhurst arcmenu@arcmenu.com pano@elhan.io gsconnect@andyholmes.github.io wifiqrcode@glerro.pm.me tiling-assistant@leleat-on-github gamemode@christian.kellner.me Vitals@CoreCoding.com )

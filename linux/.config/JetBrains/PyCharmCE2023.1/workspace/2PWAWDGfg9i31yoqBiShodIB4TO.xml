@@ -1,0 +1,155 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="pygameProject" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file>
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toDo.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="PLAIN_TEXT">
+      <summary usageCount="1" lastUsed="1683562762350" />
+    </fileType>
+    <fileType name="Python">
+      <summary usageCount="1" lastUsed="1683562500307" />
+    </fileType>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/toDo.txt" />
+      <option value="$PROJECT_DIR$/main.py" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="Python">
+      <summary usageCount="1" lastUsage="1683562500307" />
+    </language>
+    <language id="TEXT">
+      <summary usageCount="1" lastUsage="1683562762350" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pygameProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/timmy/Documents/PycharmProjects/pygameProject}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunConfigurationStartHistory">
+    <history>
+      <element setting="Python.main" />
+    </history>
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info id="Bookmarks" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11067708" />
+      <window_info id="Learn" order="0" />
+      <window_info id="Structure" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" show_stripe_button="false" weight="0.6854508" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Python Packages" order="4" />
+      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="4" />
+      <window_info anchor="bottom" id="Problems View" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.25" />
+      <unified_weights bottom="0.6854508" left="0.11067708" />
+    </layout>
+    <recentWindows>
+      <value>Run</value>
+      <value>Project</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="724" y="312" key="FileChooserDialogImpl" timestamp="1683648909495">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="724" y="312" key="FileChooserDialogImpl/0.29.1920.1051@0.29.1920.1051" timestamp="1683648909495" />
+    <state width="1874" height="306" key="GridCell.Tab.0.bottom" timestamp="1683649773483">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="306" key="GridCell.Tab.0.bottom/0.29.1920.1051@0.29.1920.1051" timestamp="1683649773483" />
+    <state width="1874" height="306" key="GridCell.Tab.0.center" timestamp="1683649773483">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="306" key="GridCell.Tab.0.center/0.29.1920.1051@0.29.1920.1051" timestamp="1683649773483" />
+    <state width="1874" height="306" key="GridCell.Tab.0.left" timestamp="1683649773483">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="306" key="GridCell.Tab.0.left/0.29.1920.1051@0.29.1920.1051" timestamp="1683649773483" />
+    <state width="1874" height="306" key="GridCell.Tab.0.right" timestamp="1683649773483">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="306" key="GridCell.Tab.0.right/0.29.1920.1051@0.29.1920.1051" timestamp="1683649773483" />
+    <state x="693" y="262" width="524" height="591" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1683562585685">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="693" y="262" width="524" height="591" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.29.1920.1051@0.29.1920.1051" timestamp="1683562585685" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/toDo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

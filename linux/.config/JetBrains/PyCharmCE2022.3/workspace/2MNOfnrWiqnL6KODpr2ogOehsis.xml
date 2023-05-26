@@ -1,0 +1,153 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="sierpinskiTriangle" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="16" selection-start-line="5" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="Python">
+      <summary usageCount="12" lastUsed="1678207992931" />
+    </fileType>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/main.py" />
+      <option value="$PROJECT_DIR$/recursive.py" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="Python">
+      <summary usageCount="12" lastUsage="1678207992931" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sierpinskiTriangle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sierpinskiTriangle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sierpinskiTriangle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sierpinskiTriangle" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sierpinskiTriangle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="sierpinskiTriangle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.11 (sierpinskiTriangle) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunConfigurationStartHistory">
+    <history>
+      <element setting="Python.recursive" executorId="Run" />
+      <element setting="Python.main" executorId="Run" />
+    </history>
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Bookmarks" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.2502604" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" show_stripe_button="false" weight="0.32988167" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Python Packages" order="4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Problems View" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Services" order="10" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.25" />
+    </layout>
+    <recentWindows>
+      <value>Project</value>
+      <value>Run</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="312" width="424" height="491" key="FileChooserDialogImpl" timestamp="1677864762682">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="743" y="312" width="424" height="491" key="FileChooserDialogImpl/0.29.1920.1051@0.29.1920.1051" timestamp="1677864762682" />
+    <state width="1874" height="306" key="GridCell.Tab.0.bottom" timestamp="1677869821281">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="306" key="GridCell.Tab.0.bottom/0.29.1920.1051@0.29.1920.1051" timestamp="1677869821281" />
+    <state width="1874" height="306" key="GridCell.Tab.0.center" timestamp="1677869821281">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="306" key="GridCell.Tab.0.center/0.29.1920.1051@0.29.1920.1051" timestamp="1677869821281" />
+    <state width="1874" height="306" key="GridCell.Tab.0.left" timestamp="1677869821280">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="306" key="GridCell.Tab.0.left/0.29.1920.1051@0.29.1920.1051" timestamp="1677869821280" />
+    <state width="1874" height="306" key="GridCell.Tab.0.right" timestamp="1677869821281">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state width="1874" height="306" key="GridCell.Tab.0.right/0.29.1920.1051@0.29.1920.1051" timestamp="1677869821281" />
+    <state x="555" y="219" width="800" height="684" key="PythonInterpreterConfigurable.size" timestamp="1677864680972">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="555" y="219" width="800" height="684" key="PythonInterpreterConfigurable.size/0.29.1920.1051@0.29.1920.1051" timestamp="1677864680972" />
+    <state x="449" y="189" width="1022" height="737" key="SettingsEditor" timestamp="1677869586777">
+      <screen x="0" y="29" width="1920" height="1051" />
+    </state>
+    <state x="449" y="189" width="1022" height="737" key="SettingsEditor/0.29.1920.1051@0.29.1920.1051" timestamp="1677869586777" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/recursive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="745">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="16" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
