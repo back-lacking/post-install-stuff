@@ -1,3 +1,0 @@
-2023-05-15 13:40:49.321 [error] electron #1: https://vscodium.now.sh/api/update/linux-x64/stable/e06ea6147733c975d26c3d3552462681e05cb147 - error undefined net::ERR_NAME_NOT_RESOLVED
-2023-05-15 13:40:49.328 [error] electron #2: https://vscodium.now.sh/api/update/linux-x64/stable/e06ea6147733c975d26c3d3552462681e05cb147 - error undefined net::ERR_NAME_NOT_RESOLVED
-2023-05-15 13:40:49.329 [error] electron #3: https://vscodium.now.sh/api/update/linux-x64/stable/e06ea6147733c975d26c3d3552462681e05cb147 - error undefined net::ERR_NAME_NOT_RESOLVED

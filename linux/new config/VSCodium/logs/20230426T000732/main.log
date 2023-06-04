@@ -1,6 +1,0 @@
-2023-04-26 00:07:32.508 [info] update#setState idle
-2023-04-26 00:07:34.323 [info] Starting extension host with pid 3633 (fork() took 19 ms).
-2023-04-26 00:08:02.510 [info] update#setState checking for updates
-2023-04-26 00:08:02.718 [info] update#setState idle
-2023-04-26 09:30:04.733 [info] Waiting for extension host with pid 3633 to exit.
-2023-04-26 09:30:04.739 [info] Extension host with pid 3633 exited with code: 0, signal: null.

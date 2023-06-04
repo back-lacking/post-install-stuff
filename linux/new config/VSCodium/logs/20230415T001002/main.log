@@ -1,6 +1,0 @@
-2023-04-15 00:10:02.939 [info] update#setState idle
-2023-04-15 00:10:04.716 [info] Starting extension host with pid 15133 (fork() took 7 ms).
-2023-04-15 00:10:32.942 [info] update#setState checking for updates
-2023-04-15 00:10:33.095 [info] update#setState idle
-2023-04-15 00:23:07.416 [info] Waiting for extension host with pid 15133 to exit.
-2023-04-15 00:23:07.420 [info] Extension host with pid 15133 exited with code: 0, signal: null.

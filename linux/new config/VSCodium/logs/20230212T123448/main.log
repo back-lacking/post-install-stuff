@@ -1,6 +1,0 @@
-2023-02-12 12:34:48.884 [info] update#setState idle
-2023-02-12 12:34:50.455 [info] Starting extension host with pid 3654 (fork() took 8 ms).
-2023-02-12 12:35:18.887 [info] update#setState checking for updates
-2023-02-12 12:35:19.044 [info] update#setState idle
-2023-02-12 12:45:12.016 [info] Waiting for extension host with pid 3654 to exit.
-2023-02-12 12:45:12.025 [info] Extension host with pid 3654 exited with code: 0, signal: null.
