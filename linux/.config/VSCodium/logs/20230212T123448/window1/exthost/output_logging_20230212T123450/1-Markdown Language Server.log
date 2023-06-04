@@ -1,8 +1,0 @@
-[Trace 17:34:51.791] VsCodeClientWorkspace: TextDocument.onDidOpen: file:///home/timmy/Downloads/syncthing-linux-amd64-v1.23%20%281%29.1/etc/linux-desktop/README.md
-[Trace 17:34:51.792] VsCodeClientWorkspace: TextDocument.onDidChanceContent: file:///home/timmy/Downloads/syncthing-linux-amd64-v1.23%20%281%29.1/etc/linux-desktop/README.md
-[Trace 17:34:51.794] Server: connection.languages.diagnostics.on: file:///home/timmy/Downloads/syncthing-linux-amd64-v1.23%20%281%29.1/etc/linux-desktop/README.md
-[Trace 17:34:51.795] Server: connection.languages.diagnostics.on: file:///home/timmy/Downloads/syncthing-linux-amd64-v1.23%20%281%29.1/etc/linux-desktop/README.md
-[Debug 17:34:51.826] LinkProvider: compute - file:///home/timmy/Downloads/syncthing-linux-amd64-v1.23%20%281%29.1/etc/linux-desktop/README.md
-[Debug 17:34:52.011] MdFoldingProvider: provideFoldingRanges — file:///home/timmy/Downloads/syncthing-linux-amd64-v1.23%20%281%29.1/etc/linux-desktop/README.md 1
-[Debug 17:34:52.011] TableOfContentsProvider: create - file:///home/timmy/Downloads/syncthing-linux-amd64-v1.23%20%281%29.1/etc/linux-desktop/README.md
-[Trace 17:34:53.083] DocumentSymbolProvider: provideDocumentSymbols — file:///home/timmy/Downloads/syncthing-linux-amd64-v1.23%20%281%29.1/etc/linux-desktop/README.md 1
