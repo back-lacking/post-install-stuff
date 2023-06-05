@@ -15,7 +15,7 @@ repo_gpgcheck=1
 gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
 metadata_expire=1h
 EOF
-
+sudo dnf update 
 # install apps from repos
 sudo dnf install pciutils-devel gcc gcc-c++ make wxGTK wxGTK-devel -y # install build deps
 sudo dnf https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.noarch.rpm -y # virtio drivers 
@@ -32,29 +32,30 @@ flatpak install com.bitwarden.desktop com.discordapp.Discord com.github.Eloston.
 flatpak install com.obsproject.Studio com.obsproject.Studio.Plugin.GStreamerVaapi  com.obsproject.Studio.Plugin.ScaleToSound com.obsproject.Studio.Plugin.OBSVkCapture -y #obs and obs deps
 
 # downloads for programs not in repos
-curl -L https://github.com/syncthing/syncthing/releases/download/v1.23.4/syncthing-linux-amd64-v1.23.4.tar.gz --output syncthing.tar.gz
+curl -L -J https://github.com/syncthing/syncthing/releases/download/v1.23.4/syncthing-linux-amd64-v1.23.4.tar.gz
 git clone https://github.com/FlyGoat/RyzenAdj.git
 git clone https://github.com/alberthdev/wxwabbitemu.git
 
 cd wxwabbitemu # building and installing wxwabbitemu 
 make 
-sudo make install
 cd ..
+sudo mv ./wxwabbitemu/bin/wxWabbitemu /usr/local/bin
 rm -rf wxwabbitemu
 
 mkdir ./RyzenAdj/build && cd ./RyzenAdj/build #building and installing ryzenadj
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make
-sudo make install
 cd .. && cd ..
+sudo mv ./RyzenAdj/build/ryzenadj /usr/bin/
 rm -rf RyzenAdj
+sudo mv "./post-install-stuff/linux/service files/ryzenAdj.service" 
 
 tar -xvzf syncthing.tar.gz #install syncthing  
-cd 
 sudo mv ./syncthing-linux-amd64-v1.23.4/syncthing ~/.local/bin/
-sudo mv './etc/linux-systemd/user/syncthing.service' '~/.config/systemd/user/'
-rm -rf syncthing-linux-amd64-v1.23.4 syncthing.tar.gz
+sudo mv "./post-install-stuff/linux/service files/syncthing.service" ~/.config/systemd/user/
+rm -rf syncthing-linux-amd64-v1.23.4.tar.gz
 
+sudo mv './post-install-stuff/linux/desktop files/*.desktop' ~/.local/share/applications/
 #gnome extensions 
 extensions_array=( user-theme@gnome-shell-extensions.gcampax.github.com extension-list@tu.berry drive-menu@gnome-shell-extensions.gcampax.github.com instantworkspaceswitcher@amalantony.net advanced-alt-tab@G-dH.github.com dash-to-dock@micxgx.gmail.com noannoyance@daase.net trayIconsReloaded@selfmade.pl just-perfection-desktop@just-perfection quick-settings-tweaks@qwreey pip-on-top@rafostar.github.com bluetooth-quick-connect@bjarosze.gmail.com reboottouefi@ubaygd.com batterytime@typeof.pw order-extensions@wa4557.github.com PrivacyMenu@stuarthayhurst arcmenu@arcmenu.com pano@elhan.io gsconnect@andyholmes.github.io wifiqrcode@glerro.pm.me tiling-assistant@leleat-on-github gamemode@christian.kellner.me Vitals@CoreCoding.com )
 
@@ -69,3 +70,5 @@ do
     gnome-extensions enable ${i}
     rm ${EXTENSION_ID}.zip
 done
+
+sudo mv -f "./post-install-stuff/linux/.config" ~/.config
