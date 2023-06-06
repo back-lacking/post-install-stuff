@@ -21,7 +21,7 @@ sudo dnf update -y
 # install apps from repos
 sudo dnf install pciutils-devel gcc gcc-c++ make wxGTK wxGTK-devel -y # install build deps
 sudo dnf https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.noarch.rpm -y # virtio drivers 
-sudo dnf install audacity prismlauncher mangohud goverylay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel hardinfo -y 
+sudo dnf install audacity prismlauncher mangohud goverylay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel hardinfo dconf-editor -y 
 
 # codecs
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
@@ -75,4 +75,6 @@ do
 done
 
 sudo mv -f "./post-install-stuff/linux/.config" ~/.config
-mv ./post-install-stuff/linux/icons ~/Pictures
+mv ./post-install-stuff/linux/icons ./post-install-stuff/Wallpapers/ ~/Pictures
+
+dconf load /org/gnome/ < ./post-install-stuff/linux/gnome-setttings.ini
