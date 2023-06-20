@@ -1,10 +1,10 @@
 #!/bin/bash
 # adding copr and other repos
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf copr enable g3tchoo/prismlauncher
-sudo dnf copr enable observeroftime/betterdiscordctl
-sudo dnf copr enable dsommers/openvpn3
-sudo dnf copr enable phracek/PyCharm 
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf copr enable g3tchoo/prismlauncher -y
+sudo dnf copr enable observeroftime/betterdiscordctl -y
+sudo dnf copr enable dsommers/openvpn3 -y
+sudo dnf copr enable phracek/PyCharm -y 
 sudo tee -a /etc/yum.repos.d/vscodium.repo << 'EOF' # vscodium repo
 [gitlab.com_paulcarroty_vscodium_repo]
 name=gitlab.com_paulcarroty_vscodium_repo
