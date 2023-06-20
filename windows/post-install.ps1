@@ -17,3 +17,9 @@ Set-ShortCut "$HOME\Documents\Portable Programs\CinebenchR23\Cinebench.exe" "%Pr
 Set-ShortCut "$HOME\Documents\Portable Programs\Prime95\prime95.exe" "%ProgramData%\Microsoft\Windows\Start Menu\Programs\Prime 95.lnk"
 Set-ShortCut "$HOME\Documents\Portable Programs\DDU v18.0.6.4\Display Driver Uninstaller.exe" "%ProgramData%\Microsoft\Windows\Start Menu\Programs\Display Driver Uninstaller.lnk"
 Set-ShortCut "$HOME\Documents\Portable Programs\Generic Log Viewer\GenericLogViewer.exe" "%ProgramData%\Microsoft\Windows\Start Menu\Programs\Generic Log Viewer.lnk"
+
+# open video downloader fix 
+Invoke-WebRequest https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe -OutFile APPDATA\Local\Programs\youtube-dl-gui\resources\app.asar.unpacked\binaries\yt-dlp.exe
+Invoke-WebRequest https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile APPDATA\Local\Programs\youtube-dl-gui\resources\app.asar.unpacked\binaries\ffmpeg.zip; Expand-Archive 'APPDATA\Local\Programs\youtube-dl-gui\resources\app.asar.unpacked\binaries\ffmpeg.zip' -DestinationPath 'APPDATA\Local\Programs\youtube-dl-gui\resources\app.asar.unpacked\binaries' -Force; Remove-Item 'APPDATA\Local\Programs\youtube-dl-gui\resources\app.asar.unpacked\binaries\ffmpeg.zip'
+Move-Item -Path 'APPDATA\Local\Programs\youtube-dl-gui\resources\app.asar.unpacked\binaries\ffmpeg\bin\*' -Destination 'APPDATA\Local\Programs\youtube-dl-gui\resources\app.asar.unpacked\binaries\' -Force
+Remove-Item APPDATA\Local\Programs\youtube-dl-gui\resources\app.asar.unpacked\binaries\ffmpeg -Recurse -Force
