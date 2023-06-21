@@ -1,10 +1,10 @@
 #!/bin/bash
 # adding copr and other repos
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf copr enable g3tchoo/prismlauncher
-sudo dnf copr enable observeroftime/betterdiscordctl
-sudo dnf copr enable dsommers/openvpn3
-sudo dnf copr enable phracek/PyCharm 
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf copr enable g3tchoo/prismlauncher -y
+sudo dnf copr enable observeroftime/betterdiscordctl -y
+sudo dnf copr enable dsommers/openvpn3 -y
+sudo dnf copr enable phracek/PyCharm -y
 sudo tee -a /etc/yum.repos.d/vscodium.repo << 'EOF' # vscodium repo
 [gitlab.com_paulcarroty_vscodium_repo]
 name=gitlab.com_paulcarroty_vscodium_repo
@@ -19,9 +19,9 @@ EOF
 sudo dnf update -y
 
 # install apps from repos
-sudo dnf install pciutils-devel gcc gcc-c++ make wxGTK wxGTK-devel -y # install build deps
+sudo dnf install glib-devel gtk+-devel zlib-devel libsoup-devel json-glib-devel gtk2-devel cmake pciutils-devel gcc gcc-c++ make wxGTK wxGTK-devel -y # install build deps 
 sudo dnf https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.noarch.rpm -y # virtio drivers 
-sudo dnf install audacity prismlauncher mangohud goverylay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel hardinfo dconf-editor -y 
+sudo dnf install lm-sensors btop audacity prismlauncher mangohud goverlay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel dconf-editor -y 
 
 # codecs
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
@@ -37,6 +37,11 @@ flatpak install com.obsproject.Studio com.obsproject.Studio.Plugin.GStreamerVaap
 curl -L -J https://github.com/syncthing/syncthing/releases/download/v1.23.4/syncthing-linux-amd64-v1.23.4.tar.gz
 git clone https://github.com/FlyGoat/RyzenAdj.git
 git clone https://github.com/alberthdev/wxwabbitemu.git
+git clone https://github.com/lpereira/hardinfo.git
+
+mkdir ./hardinfo/build && cd ./hardinfo/build # building and installing hardinfo
+cmake .. 
+make 
 
 cd wxwabbitemu # building and installing wxwabbitemu 
 make 
@@ -48,7 +53,7 @@ mkdir ./RyzenAdj/build && cd ./RyzenAdj/build #building and installing ryzenadj
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 cd .. && cd ..
-sudo mv ./RyzenAdj/build/ryzenadj /usr/bin/
+#sudo mv ./RyzenAdj/build/ryzenadj /usr/bin/
 rm -rf RyzenAdj
 sudo mv "./post-install-stuff/linux/service files/ryzenAdj.service" /usr/lib/systemd/system/
 
@@ -77,4 +82,6 @@ done
 sudo mv -f "./post-install-stuff/linux/.config" ~/.config
 mv ./post-install-stuff/linux/icons ./post-install-stuff/Wallpapers/ ~/Pictures
 
+#loading settings 
 dconf load /org/gnome/ < ./post-install-stuff/linux/gnome-setttings.ini
+mv "./post-install-stuff/linux/.bashrc" ~/
