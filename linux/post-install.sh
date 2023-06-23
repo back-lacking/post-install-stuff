@@ -21,7 +21,7 @@ sudo dnf update -y
 # install apps from repos
 sudo dnf install glib-devel gtk+-devel zlib-devel libsoup-devel json-glib-devel gtk2-devel cmake pciutils-devel gcc gcc-c++ make wxGTK wxGTK-devel -y # install build deps 
 sudo dnf https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.noarch.rpm -y # virtio drivers 
-sudo dnf install lm_sensors btop audacity prismlauncher mangohud goverlay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel dconf-editor -y 
+sudo dnf install lm_sensors btop audacity prismlauncher mangohud goverlay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel dconf-editor -y --allowerasing
 
 # codecs
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
