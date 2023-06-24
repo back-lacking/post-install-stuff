@@ -34,7 +34,7 @@ flatpak install com.bitwarden.desktop com.discordapp.Discord com.github.Eloston.
 flatpak install com.obsproject.Studio com.obsproject.Studio.Plugin.GStreamerVaapi  com.obsproject.Studio.Plugin.ScaleToSound com.obsproject.Studio.Plugin.OBSVkCapture -y #obs and obs deps
 
 # downloads for programs not in repos
-curl -L -J https://github.com/syncthing/syncthing/releases/download/v1.23.4/syncthing-linux-amd64-v1.23.4.tar.gz
+curl -LOJ https://github.com/syncthing/syncthing/releases/download/v1.23.4/syncthing-linux-amd64-v1.23.4.tar.gz
 git clone https://github.com/FlyGoat/RyzenAdj.git
 git clone https://github.com/alberthdev/wxwabbitemu.git
 git clone https://github.com/lpereira/hardinfo.git
@@ -42,6 +42,10 @@ git clone https://github.com/lpereira/hardinfo.git
 mkdir ./hardinfo/build && cd ./hardinfo/build # building and installing hardinfo
 cmake .. 
 make 
+sudo mv hardinfo /usr/local/bin/
+sudo mv hardinfo.desktop ~/.local/share/applications/
+cd .. && cd .. 
+rm -rf hardinfo 
 
 cd wxwabbitemu # building and installing wxwabbitemu 
 make 
