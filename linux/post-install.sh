@@ -81,7 +81,7 @@ sudo mv ./syncthing-linux-amd64-v1.23.5/syncthing ~/.local/bin/
 sudo mv ./post-install-stuff/linux/service-files/syncthing.service ~/.config/systemd/user/
 rm -rf syncthing*
 
-sudo mv ./post-install-stuff/linux/desktop-files/*.desktop ~/.local/share/applications/ #move desktop files to approprate place
+mv ./post-install-stuff/linux/desktop-files/*.desktop ~/.local/share/applications/ #move desktop files to approprate place
 
 #gnome extensions 
 extensions_array=( user-theme@gnome-shell-extensions.gcampax.github.com extension-list@tu.berry drive-menu@gnome-shell-extensions.gcampax.github.com instantworkspaceswitcher@amalantony.net advanced-alt-tab@G-dH.github.com dash-to-dock@micxgx.gmail.com noannoyance@daase.net trayIconsReloaded@selfmade.pl just-perfection-desktop@just-perfection quick-settings-tweaks@qwreey pip-on-top@rafostar.github.com bluetooth-quick-connect@bjarosze.gmail.com reboottouefi@ubaygd.com batterytime@typeof.pw order-extensions@wa4557.github.com PrivacyMenu@stuarthayhurst arcmenu@arcmenu.com pano@elhan.io gsconnect@andyholmes.github.io wifiqrcode@glerro.pm.me tiling-assistant@leleat-on-github gamemode@christian.kellner.me Vitals@CoreCoding.com )
