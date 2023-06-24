@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=wxWabbitemu
+Comment=A TI-8x emulator that uses the wxWidgets toolkit
+Exec=/usr/local/bin/wxWabbitemu
+Terminal=false
+Type=Application
+Icon=~/Pictures/icons/wxWabbitemu.ico
+StartupWMClass=wxWabbitemu
+Keywords=wabbit
+Categories=Utility;
