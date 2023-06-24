@@ -19,7 +19,7 @@ EOF
 sudo dnf update -y
 
 # install apps from repos
-sudo dnf install glib-devel gtk+-devel zlib-devel libsoup-devel json-glib-devel gtk2-devel cmake pciutils-devel gcc gcc-c++ make wxGTK wxGTK-devel -y # install build deps 
+sudo dnf install glib-devel gtk+-devel zlib-devel libsoup-devel json-glib-devel gtk2-devel cmake pciutils-devel gcc gcc-c++ make wxGTK3 wxGTK3-devel -y # install build deps 
 sudo dnf https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.noarch.rpm -y # virtio drivers 
 sudo dnf install lm_sensors btop audacity prismlauncher mangohud goverlay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel dconf-editor -y --allowerasing
 
@@ -34,10 +34,14 @@ flatpak install com.bitwarden.desktop com.discordapp.Discord com.github.Eloston.
 flatpak install com.obsproject.Studio com.obsproject.Studio.Plugin.GStreamerVaapi  com.obsproject.Studio.Plugin.ScaleToSound com.obsproject.Studio.Plugin.OBSVkCapture -y #obs and obs deps
 
 # downloads for programs not in repos
-curl -LOJ https://github.com/syncthing/syncthing/releases/download/v1.23.4/syncthing-linux-amd64-v1.23.4.tar.gz
+curl -LOJ https://github.com/syncthing/syncthing/releases/download/v1.23.5/syncthing-linux-amd64-v1.23.5.tar.gz
 git clone https://github.com/FlyGoat/RyzenAdj.git
 git clone https://github.com/alberthdev/wxwabbitemu.git
 git clone https://github.com/lpereira/hardinfo.git
+
+# make dirs for user systemd service files and bins
+mkdir ~/.config/systemd/user
+mkdir ~/.local/bin/
 
 mkdir ./hardinfo/build && cd ./hardinfo/build # building and installing hardinfo
 cmake .. 
@@ -49,22 +53,23 @@ rm -rf hardinfo
 
 cd wxwabbitemu # building and installing wxwabbitemu 
 make 
+sudo make install 
 cd ..
-sudo mv ./wxwabbitemu/bin/wxWabbitemu /usr/local/bin
 rm -rf wxwabbitemu
 
 mkdir ./RyzenAdj/build && cd ./RyzenAdj/build #building and installing ryzenadj
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 cd .. && cd ..
-#sudo mv ./RyzenAdj/build/ryzenadj /usr/bin/
+sudo mv ./RyzenAdj/build/ryzenadj /usr/bin/
 rm -rf RyzenAdj
 sudo mv "./post-install-stuff/linux/service files/ryzenAdj.service" /usr/lib/systemd/system/
+systemctl enable ryzenAdj.service
 
-tar -xvzf syncthing-linux-amd64-v1.23.4.tar.gz #install syncthing  
-sudo mv ./syncthing-linux-amd64-v1.23.4/syncthing ~/.local/bin/
+tar -xvzf syncthing-linux-amd64-v1.23.5.tar.gz #install syncthing  
+sudo mv ./syncthing-linux-amd64-v1.23.5/syncthing ~/.local/bin/
 sudo mv "./post-install-stuff/linux/service files/syncthing.service" ~/.config/systemd/user/
-rm -rf syncthing-linux-amd64-v1.23.4.tar.gz ./syncthing-linux-amd64-v1.23.4/
+rm -rf syncthing-linux-amd64-v1.23.5.tar.gz ./syncthing-linux-amd64-v1.23.5/
 
 sudo mv './post-install-stuff/linux/desktop files/*.desktop' ~/.local/share/applications/
 
