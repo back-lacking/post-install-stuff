@@ -21,7 +21,7 @@ sudo dnf update -y
 # install apps from repos
 sudo dnf install glib-devel gtk+-devel zlib-devel libsoup-devel json-glib-devel gtk2-devel cmake pciutils-devel gcc gcc-c++ make wxGTK3 wxGTK3-devel -y # install build deps 
 sudo dnf https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.noarch.rpm -y # virtio drivers 
-sudo dnf install lm_sensors btop audacity prismlauncher mangohud goverlay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel dconf-editor -y --allowerasing
+sudo dnf install lm_sensors btop powertop audacity prismlauncher mangohud goverlay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel dconf-editor -y --allowerasing
 
 # codecs
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
@@ -38,40 +38,50 @@ curl -LOJ https://github.com/syncthing/syncthing/releases/download/v1.23.5/synct
 git clone https://github.com/FlyGoat/RyzenAdj.git
 git clone https://github.com/alberthdev/wxwabbitemu.git
 git clone https://github.com/lpereira/hardinfo.git
+git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 
 # make dirs for user systemd service files and bins
+mkdir ~/.config/systemd/
 mkdir ~/.config/systemd/user
 mkdir ~/.local/bin/
 
-mkdir ./hardinfo/build && cd ./hardinfo/build # building and installing hardinfo
+#icon folder move 
+mv ./post-install-stuff/linux/icons ~/Pictures
+#install auto-cpufreq
+cd auto-cpufreq && sudo ./auto-cpufreq-installer 
+
+# building and installing hardinfo
+mkdir ./hardinfo/build && cd ./hardinfo/build 
 cmake .. 
 make 
-sudo mv hardinfo /usr/local/bin/
-sudo mv hardinfo.desktop ~/.local/share/applications/
+sudo make install 
 cd .. && cd .. 
 rm -rf hardinfo 
 
-cd wxwabbitemu # building and installing wxwabbitemu 
+# building and installing wxwabbitemu
+cd wxwabbitemu  
 make 
 sudo make install 
 cd ..
 rm -rf wxwabbitemu
 
-mkdir ./RyzenAdj/build && cd ./RyzenAdj/build #building and installing ryzenadj
+#building and installing ryzenadj
+mkdir ./RyzenAdj/build && cd ./RyzenAdj/build 
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 cd .. && cd ..
 sudo mv ./RyzenAdj/build/ryzenadj /usr/bin/
 rm -rf RyzenAdj
-sudo mv "./post-install-stuff/linux/service files/ryzenAdj.service" /usr/lib/systemd/system/
+sudo mv ./post-install-stuff/linux/service-files/ryzenAdj.service /usr/lib/systemd/system/
 systemctl enable ryzenAdj.service
 
-tar -xvzf syncthing-linux-amd64-v1.23.5.tar.gz #install syncthing  
+#install syncthing
+tar -xvzf syncthing-linux-amd64-v1.23.5.tar.gz   
 sudo mv ./syncthing-linux-amd64-v1.23.5/syncthing ~/.local/bin/
-sudo mv "./post-install-stuff/linux/service files/syncthing.service" ~/.config/systemd/user/
-rm -rf syncthing-linux-amd64-v1.23.5.tar.gz ./syncthing-linux-amd64-v1.23.5/
+sudo mv ./post-install-stuff/linux/service-files/syncthing.service ~/.config/systemd/user/
+rm -rf syncthing*
 
-sudo mv './post-install-stuff/linux/desktop files/*.desktop' ~/.local/share/applications/
+sudo mv ./post-install-stuff/linux/desktop-files/*.desktop ~/.local/share/applications/ #move desktop files to approprate place
 
 #gnome extensions 
 extensions_array=( user-theme@gnome-shell-extensions.gcampax.github.com extension-list@tu.berry drive-menu@gnome-shell-extensions.gcampax.github.com instantworkspaceswitcher@amalantony.net advanced-alt-tab@G-dH.github.com dash-to-dock@micxgx.gmail.com noannoyance@daase.net trayIconsReloaded@selfmade.pl just-perfection-desktop@just-perfection quick-settings-tweaks@qwreey pip-on-top@rafostar.github.com bluetooth-quick-connect@bjarosze.gmail.com reboottouefi@ubaygd.com batterytime@typeof.pw order-extensions@wa4557.github.com PrivacyMenu@stuarthayhurst arcmenu@arcmenu.com pano@elhan.io gsconnect@andyholmes.github.io wifiqrcode@glerro.pm.me tiling-assistant@leleat-on-github gamemode@christian.kellner.me Vitals@CoreCoding.com )
