@@ -84,18 +84,25 @@ rm -rf syncthing*
 sudo mv ./post-install-stuff/linux/desktop-files/*.desktop /usr/share/applications/ #move desktop files to approprate place
 
 #gnome extensions 
-extensions_array=( user-theme@gnome-shell-extensions.gcampax.github.com extension-list@tu.berry drive-menu@gnome-shell-extensions.gcampax.github.com instantworkspaceswitcher@amalantony.net advanced-alt-tab@G-dH.github.com dash-to-dock@micxgx.gmail.com noannoyance@daase.net trayIconsReloaded@selfmade.pl just-perfection-desktop@just-perfection quick-settings-tweaks@qwreey pip-on-top@rafostar.github.com bluetooth-quick-connect@bjarosze.gmail.com reboottouefi@ubaygd.com batterytime@typeof.pw order-extensions@wa4557.github.com PrivacyMenu@stuarthayhurst arcmenu@arcmenu.com pano@elhan.io gsconnect@andyholmes.github.io wifiqrcode@glerro.pm.me tiling-assistant@leleat-on-github gamemode@christian.kellner.me Vitals@CoreCoding.com )
+extensions_array=( user-theme@gnome-shell-extensions.gcampax.github.com extension-list@tu.berry drive-menu@gnome-shell-extensions.gcampax.github.com instantworkspaceswitcher@amalantony.net advanced-alt-tab@G-dH.github.com dash-to-dock@micxgx.gmail.com noannoyance@daase.net trayIconsReloaded@selfmade.pl just-perfection-desktop@just-perfection quick-settings-tweaks@qwreey pip-on-top@rafostar.github.com bluetooth-quick-connect@bjarosze.gmail.com reboottouefi@ubaygd.com batterytime@typeof.pw order-extensions@wa4557.github.com PrivacyMenu@stuarthayhurst arcmenu@arcmenu.com pano@elhan.io gsconnect@andyholmes.github.io wifiqrcode@glerro.pm.me tiling-assistant@leleat-on-github gamemode@christian.kellner.me Vitals@CoreCoding.com ) # array to hold the extensions
+GNOME_SHELL_VERSION="$(gnome-shell --version | cut --delimiter=' ' --fields=3 | cut --delimiter='.' --fields=1,2)" # var to fetch gnome shell version
 
-for i in "${extensions_array[@]}"
-do
-    VERSION_TAG=$(curl -Lfs "https://extensions.gnome.org/extension-query/?search=${i}" | jq '.extensions[0] | .shell_version_map | map(.pk) | max')
-    wget -O ${i}.zip "https://extensions.gnome.org/download-extension/${i}.shell-extension.zip?version_tag=$VERSION_TAG"
-    gnome-extensions install --force ${EXTENSION_ID}.zip
-    if ! gnome-extensions list | grep --quiet ${i}; then
-        busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions InstallRemoteExtensions ${i}
-    fi
-    gnome-extensions enable ${i}
-    rm ${EXTENSION_ID}.zip
+for ext_id in "${extensions_array[@]}" ; do
+    # VERSION_TAG=$(curl -Lfs "https://extensions.gnome.org/extension-query/?search=${i}" | jq '.extensions[0] | .shell_version_map | map(.pk) | max')
+    request_url="https://extensions.gnome.org/extension-info/?pk=$ext_id&shell_version=$GNOME_SHELL_VERSION"
+	
+	ext_info="$(curl -s "$request_url")"
+    extension_name="$(echo "$ext_info" | jq -r '.name')"
+    direct_dload_url="$(echo "$ext_info" | jq -r '.download_url')"
+	ext_version="$(echo "$ext_info" | jq -r '.version')"
+    download_url="https://extensions.gnome.org"$direct_dload_url
+	
+	filename="$(basename "$download_url")"
+	wget -q "download_url"
+    gnome-extensions install --force $filename
+    gnome-extensions enable $filename
+    rm $filename
+	# follow this for reference https://github.com/ToasterUwU/install-gnome-extensions/blob/master/install-gnome-extensions.sh
 done
 
 sudo mv -f "./post-install-stuff/linux/.config" ~/.config

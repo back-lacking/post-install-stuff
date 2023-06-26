@@ -39,8 +39,9 @@ alias dnf-up='sudo dnf upgrade'
 alias dnf='sudo dnf'
 alias rebootfw='systemctl reboot --firmware-setup'
 alias powertop='sudo powertop'
-alias sleep-mount='sudo mount -n -o remount,rw /'
-alias ryzen-controller='sudo ryzen-controller --no-sandbox &'
 alias cpufreq='sudo auto-cpufreq'
 export PATH=$PATH:/home/timmy/.spicetify
 
+#alias mispellings
+alias wxwabbitemu = 'wxWabbitemu'
+alias gamemode = 'gamemoderun'
