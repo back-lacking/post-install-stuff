@@ -24,10 +24,10 @@ sudo dnf https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest
 sudo dnf install lm_sensors btop powertop audacity prismlauncher mangohud goverlay codium gamemode cpu-x betterdiscordctl flameshot gimp steam strawberry gnome-tweaks virt-manager xournalpp ffmpeg ffmpeg-devel dconf-editor -y --allowerasing
 
 # codecs
-sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
-sudo dnf install gstreamer1-plugins-{bad-*,good-*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
-sudo dnf install lame* --exclude=lame-devel -y
-sudo dnf group upgrade --with-optional Multimedia -y
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel --allowerasing -y
+sudo dnf install gstreamer1-plugins-{bad-*,good-*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel --allowerasing -y
+sudo dnf install lame* --exclude=lame-devel --allowerasing -y
+sudo dnf group upgrade --with-optional Multimedia -y --allowerasing 
 sudo dnf upgrade -y
 # flatpak installs
 flatpak install com.bitwarden.desktop com.discordapp.Discord com.github.Eloston.UngoogledChromium com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager com.usebottles.bottles com.spotify.Client fr.handbrake.ghb md.obsidian.Obsidian org.linux_hardware.hw-probe org.onlyoffice.desktopeditors -y
@@ -35,6 +35,7 @@ flatpak install com.obsproject.Studio com.obsproject.Studio.Plugin.GStreamerVaap
 
 # downloads for programs not in repos
 curl -LOJ https://github.com/syncthing/syncthing/releases/download/v1.23.5/syncthing-linux-amd64-v1.23.5.tar.gz
+curl -LOJ https://raw.githubusercontent.com/luisrguerra/monday-icon-theme/main/install.sh
 git clone https://github.com/FlyGoat/RyzenAdj.git
 git clone https://github.com/alberthdev/wxwabbitemu.git
 git clone https://github.com/lpereira/hardinfo.git
@@ -45,13 +46,15 @@ mkdir ~/.config/systemd/
 mkdir ~/.config/systemd/user
 mkdir ~/.local/bin/
 
-#icon folder move 
-mv ./post-install-stuff/linux/icons ~/Pictures
+# install monday icon pack
+sh install.sh
+
 #install auto-cpufreq
 cd auto-cpufreq && sudo ./auto-cpufreq-installer 
+rm -rf auto-cpufreq
 
 # building and installing hardinfo
-mkdir ./hardinfo/build && cd ./hardinfo/build 
+cd hardinfo && mkdir ./build && cd ./hardinfo/build 
 cmake .. 
 make 
 sudo make install 
@@ -78,10 +81,10 @@ systemctl enable ryzenAdj.service
 #install syncthing
 tar -xvzf syncthing-linux-amd64-v1.23.5.tar.gz   
 sudo mv ./syncthing-linux-amd64-v1.23.5/syncthing ~/.local/bin/
-sudo mv ./post-install-stuff/linux/service-files/syncthing.service ~/.config/systemd/user/
+sudo mv ./service-files/syncthing.service ~/.config/systemd/user/
 rm -rf syncthing*
 
-sudo mv ./post-install-stuff/linux/desktop-files/*.desktop /usr/share/applications/ #move desktop files to approprate place
+sudo mv ./desktop-files/*.desktop /usr/share/applications/ #move desktop files to approprate place
 
 #gnome extensions 
 extensions_array=( user-theme@gnome-shell-extensions.gcampax.github.com extension-list@tu.berry drive-menu@gnome-shell-extensions.gcampax.github.com instantworkspaceswitcher@amalantony.net advanced-alt-tab@G-dH.github.com dash-to-dock@micxgx.gmail.com noannoyance@daase.net trayIconsReloaded@selfmade.pl just-perfection-desktop@just-perfection quick-settings-tweaks@qwreey pip-on-top@rafostar.github.com bluetooth-quick-connect@bjarosze.gmail.com reboottouefi@ubaygd.com batterytime@typeof.pw order-extensions@wa4557.github.com PrivacyMenu@stuarthayhurst arcmenu@arcmenu.com pano@elhan.io gsconnect@andyholmes.github.io wifiqrcode@glerro.pm.me tiling-assistant@leleat-on-github gamemode@christian.kellner.me Vitals@CoreCoding.com ) # array to hold the extensions
@@ -105,9 +108,10 @@ for ext_id in "${extensions_array[@]}" ; do
 	# follow this for reference https://github.com/ToasterUwU/install-gnome-extensions/blob/master/install-gnome-extensions.sh
 done
 
-sudo mv -f "./post-install-stuff/linux/.config" ~/.config
-mv ./post-install-stuff/linux/icons ./post-install-stuff/Wallpapers/ ~/Pictures
+
+mv ./icons ./Wallpapers/ ~/Pictures #move images and icons to home pic dir
 
 #loading settings 
-dconf load /org/gnome/ < ./post-install-stuff/linux/gnome-setttings.ini
-mv "./post-install-stuff/linux/.bashrc" ~/
+mv -f .config ~/.config # moves config
+mv .bashrc ~/
+dconf load /org/gnome/ < gnome-setttings.ini
