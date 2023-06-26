@@ -40,6 +40,7 @@ alias dnf='sudo dnf'
 alias rebootfw='systemctl reboot --firmware-setup'
 alias powertop='sudo powertop'
 alias cpufreq='sudo auto-cpufreq'
+alias shutdown = 'shutdown 0'
 export PATH=$PATH:/home/timmy/.spicetify
 
 #alias mispellings
